@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 The Basics | A Minimal Book Example</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 The Basics | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 The Basics | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="John Doe" />
+
+
+<meta name="date" content="2026-06-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-1-setup.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-1-setup.html"><a href="module-1-setup.html"><i class="fa fa-check"></i><b>2</b> Module 1: Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="module-1-setup.html"><a href="module-1-setup.html#what-is-r"><i class="fa fa-check"></i><b>2.1</b> What is R?</a></li>
+<li class="chapter" data-level="2.2" data-path="module-1-setup.html"><a href="module-1-setup.html#installing-r"><i class="fa fa-check"></i><b>2.2</b> Installing R</a></li>
+<li class="chapter" data-level="2.3" data-path="module-1-setup.html"><a href="module-1-setup.html#installing-rstudio"><i class="fa fa-check"></i><b>2.3</b> Installing RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> The Basics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#navigating-rstudio"><i class="fa fa-check"></i><b>3.1</b> Navigating RStudio</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="basics.html"><a href="basics.html#console-window"><i class="fa fa-check"></i><b>3.1.1</b> Console Window</a></li>
+<li class="chapter" data-level="3.1.2" data-path="basics.html"><a href="basics.html#editor-window"><i class="fa fa-check"></i><b>3.1.2</b> Editor Window</a></li>
+<li class="chapter" data-level="3.1.3" data-path="basics.html"><a href="basics.html#workspace-window"><i class="fa fa-check"></i><b>3.1.3</b> Workspace Window</a></li>
+<li class="chapter" data-level="3.1.4" data-path="basics.html"><a href="basics.html#other-window"><i class="fa fa-check"></i><b>3.1.4</b> “Other” Window</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#data-as-objects"><i class="fa fa-check"></i><b>3.2</b> Data as Objects</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="basics.html"><a href="basics.html#vectors"><i class="fa fa-check"></i><b>3.2.1</b> Vectors</a></li>
+<li class="chapter" data-level="3.2.2" data-path="basics.html"><a href="basics.html#variables"><i class="fa fa-check"></i><b>3.2.2</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#functions"><i class="fa fa-check"></i><b>3.3</b> Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basics" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> The Basics<a href="basics.html#basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="navigating-rstudio" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Navigating RStudio<a href="basics.html#navigating-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RStudio is laid out into 4 different panes. The default panes are as shown below:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="basics.html#cb3-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/RStudioLayout.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/RStudioLayout.png" /><!-- --></p>
+<div id="console-window" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Console Window<a href="basics.html#console-window" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>This window is where your code will be run by R, and also where the result of the code will be printed.</p></li>
+<li><p>You can try it out by typing <code>5</code> into the R console after the “&gt;” prompt, and then hitting enter. Then type <code>2 + 3</code>. What do you see?</p></li>
+</ul>
+<p>In both cases R returns the <code>5</code> as a response from the input.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="basics.html#cb4-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/ConsoleLayout.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/ConsoleLayout.png" /><!-- --></p>
+</div>
+<div id="editor-window" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Editor Window<a href="basics.html#editor-window" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>This window is where you can create R scripts wherein you can write down your code to store so you can rerun it multiple times and store it for later reuse.</p></li>
+<li><p>To open an R script, navigate to the following:</p></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="basics.html#cb5-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/OpenNewRScript.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/OpenNewRScript.png" /><!-- --></p>
+<ul>
+<li>In your newly opened R script, type in <code>5</code> on line 1, then click enter to create a new line and type <code>2 + 3</code>. To run these lines of codes, select them or hold your cursor on that line and either press <strong>CTRL+ENTER</strong>, or click on the Run button. What do you see?</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="basics.html#cb6-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/ScriptToConsoleOutputExample.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/ScriptToConsoleOutputExample.png" /><!-- --></p>
+<p>The commands are run through the console, and the output is presented the same way as before.</p>
+<ul>
+<li>To store this file either press <strong>CTRL+S</strong>, or navigate to <strong>File &gt; Save</strong>, and give the script a name. You can reopen this file and your previously written code will be available for you to rerun.</li>
+</ul>
+</div>
+<div id="workspace-window" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Workspace Window<a href="basics.html#workspace-window" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>This window contains your Environment which shows all the Objects (more on these later) you currently have stored in your R workspace. This window shows you what information you currently have stored.</p></li>
+<li><p>In your <a href="basics.html#editor-window">Editor Window</a> type <code>x &lt;- 2 + 3</code> and run it. What do you see in your Workspace window?</p></li>
+</ul>
+<p>You can see that the Object <code>x</code> is now stored in your workspace and has the value of <code>5</code> assigned to it.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="basics.html#cb7-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/Editor1Example.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/Editor1Example.png" /><!-- --></p>
+<ul>
+<li>Now type x into your <a href="basics.html#editor-window">Editor Window</a>and run it, what output do you see in the console window?</li>
+</ul>
+<p>The console returns <code>5</code>, the value of <code>x</code>.</p>
+</div>
+<div id="other-window" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> “Other” Window<a href="basics.html#other-window" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This window contains several different panes each with their own function, we will encounter some of these panes as we go through these modules and some others you will likely never use for the rest of your life.</p>
+<p>START EXCERSISE 1.1</p>
+</div>
+</div>
+<div id="data-as-objects" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Data as Objects<a href="basics.html#data-as-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In R, we spend most of our time working with objects. Objects can be almost anything, from numbers like the <code>5</code> you worked with earlier, to whole datasets, graphic figures, and even code itself can be stored and passed around as an object. To create your own object you make use of <code>&lt;-</code> as you did previously:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="basics.html#cb8-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/ObjectAssignment.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/ObjectAssignment.png" /><!-- --></p>
+<p><u>As a quick note</u>: we advise you to code along with these examples so you understand how to implement them in RStudio.</p>
+<p>One major type of object you will frequently encounter (and in fact you just created one) is Data. Data is a broad category comprising anything from a single number to a multi-dimensional array, but for now let’s focus on vectors.</p>
+<div id="vectors" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Vectors<a href="basics.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A vector is <em>one or more of the same type of things, one after the other</em></p>
+<p>The function <code>c()</code> can create vectors:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="basics.html#cb9-1" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="basics.html#cb11-1" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;Hagrid&quot;</span>, <span class="st">&quot;Harry&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hagrid&quot; &quot;Harry&quot;</code></pre>
+<p>Notice I make vectors of numbers or sentences but not both at the same time - hence “the same <u>type</u> of thing”. Below are examples of different “single” objects that can occur together in a vector.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="basics.html#cb13-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Example =</span> <span class="fu">c</span>(<span class="st">&quot;42&quot;</span>, <span class="st">&quot;2.1543&quot;</span>, <span class="st">&quot;</span><span class="sc">\&quot;</span><span class="st">Felix</span><span class="sc">\&quot;</span><span class="st">; </span><span class="sc">\&quot;</span><span class="st">Tilburg</span><span class="sc">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;TRUE; FALSE&quot;</span>),</span>
+<span id="cb13-2"><a href="basics.html#cb13-2" tabindex="-1"></a>                 <span class="at">Type =</span> <span class="fu">c</span>(<span class="st">&quot;Integer (numeric)&quot;</span>, <span class="st">&quot;Double (numeric)&quot;</span>, <span class="st">&quot;Character&quot;</span>, <span class="st">&quot;Logical&quot;</span>),</span>
+<span id="cb13-3"><a href="basics.html#cb13-3" tabindex="-1"></a>                 <span class="at">Explanation =</span> <span class="fu">c</span>(<span class="st">&quot;A number contains no decimals&quot;</span>, <span class="st">&quot;A number that **may** contain decimals&quot;</span>, <span class="st">&quot;A string of textual characters&quot;</span>, <span class="st">&quot;Special characters indicating either TRUE or FALSE&quot;</span>))</span>
+<span id="cb13-4"><a href="basics.html#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="basics.html#cb13-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df, <span class="at">caption =</span> <span class="st">&quot;Fundamental R Data Types&quot;</span>,  <span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:data-types">Table 3.1: </span>Fundamental R Data Types</caption>
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Example</th>
+<th align="left">Type</th>
+<th align="left">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">42</td>
+<td align="left">Integer (numeric)</td>
+<td align="left">A number contains no decimals</td>
+</tr>
+<tr class="even">
+<td align="left">2.1543</td>
+<td align="left">Double (numeric)</td>
+<td align="left">A number that <strong>may</strong> contain decimals</td>
+</tr>
+<tr class="odd">
+<td align="left">“Felix”; “Tilburg”</td>
+<td align="left">Character</td>
+<td align="left">A string of textual characters</td>
+</tr>
+<tr class="even">
+<td align="left">TRUE; FALSE</td>
+<td align="left">Logical</td>
+<td align="left">Special characters indicating either TRUE or FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>Note that you cannot create a vector from different types of objects. Thus in the following case:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="basics.html#cb14-1" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;Hagrid&quot;</span>, <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hagrid&quot; &quot;1&quot;</code></pre>
+<p>R automatically turns the <code>1</code> numeric type variable into a <code>"1"</code> character type variable to turn the vector into a character vector.</p>
+<p>You may hear some people call R a “vectorized language”. What they are referring to is that when you perform an operation on a vector in R it will often perform that operation on each element of the vector.</p>
+<p>For example, suppose there are 14 students in a class, of the following ages:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="basics.html#cb16-1" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span></code></pre></div>
+<pre><code>##  [1] 22 22 21 25 23 19 23 25 19 21 20 23</code></pre>
+<p>Then I can get their squared ages by:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="basics.html#cb18-1" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)<span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 484 484 441 625 529 361 529 625 361 441 400 529</code></pre>
+<p>Or the sum of the ages as:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="basics.html#cb20-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>))</span></code></pre></div>
+<pre><code>## [1] 263</code></pre>
+<p>Typing out a vector each time you want to do something with it is way too much work and looks messy. Just like any other object in R, you can store a vector of values for later use by assigning it to a <u>variable</u>. This works the same way as assigning a single value:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="basics.html#cb22-1" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span>
+<span id="cb22-2"><a href="basics.html#cb22-2" tabindex="-1"></a>ages</span></code></pre></div>
+<pre><code>##  [1] 22 22 21 25 23 19 23 25 19 21 20 23</code></pre>
+</div>
+<div id="variables" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Variables<a href="basics.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A variable is a placeholder name that refers to some object, such as a vector. They function like the numbers they have on clothing racks in some places:</p>
+<ul>
+<li><p>The coat is the value and the number on the hanger is the name of the variable</p></li>
+<li><p>So, <code>c(22, 22, 21, 25, 23, 19, 23, 25, 19, 21, 20, 23)</code> is the coat, and <code>ages</code> is the “hanger”.</p></li>
+</ul>
+<p>Putting the coat on a hanger is called “assigning” a value to a variable.  As mentioned before assigning value into variables is done with <code>&lt;-</code>.</p>
+<p>A variable can be named anything as long as it does <u>not</u> start with a number, does not contain operators, contains at least one regular letter character, and is preferably not already in use by R.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="basics.html#cb24-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Acceptable =</span> <span class="fu">c</span>(<span class="st">&quot;my_var_3&quot;</span>, <span class="st">&quot;x_ (fine albeit ugly)&quot;</span>, <span class="st">&quot;hamburgers_with_cheese (you can go as crazy as you want with your names)&quot;</span>, <span class="st">&quot;x&quot;</span>),</span>
+<span id="cb24-2"><a href="basics.html#cb24-2" tabindex="-1"></a>                 <span class="st">&quot;Not Acceptable&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;3_my_var (starts with a number)&quot;</span>, <span class="st">&quot;x^ (contains an operator character)&quot;</span>, <span class="st">&quot;__ (no letter character)&quot;</span>, <span class="st">&quot;pi (already in use by R; meaning that if you use it, it will overwrite the pi constant in R, and to use the pi constant again you would need to reset your R workspace)&quot;</span>))</span>
+<span id="cb24-3"><a href="basics.html#cb24-3" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="basics.html#cb24-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df, <span class="at">caption =</span> <span class="st">&#39;Object Naming Rules&#39;</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:object-errors">Table 3.2: </span>Object Naming Rules</caption>
+<colgroup>
+<col width="30%" />
+<col width="69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Acceptable</th>
+<th align="left">Not.Acceptable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">my_var_3</td>
+<td align="left">3_my_var (starts with a number)</td>
+</tr>
+<tr class="even">
+<td align="left">x_ (fine albeit ugly)</td>
+<td align="left">x^ (contains an operator character)</td>
+</tr>
+<tr class="odd">
+<td align="left">hamburgers_with_cheese (you can go as crazy as you want with your names)</td>
+<td align="left">__ (no letter character)</td>
+</tr>
+<tr class="even">
+<td align="left">x</td>
+<td align="left">pi (already in use by R; meaning that if you use it, it will overwrite the pi constant in R, and to use the pi constant again you would need to reset your R workspace)</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="basics.html#cb25-1" tabindex="-1"></a>pi</span></code></pre></div>
+<pre><code>## [1] 3.141593</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="basics.html#cb27-1" tabindex="-1"></a>pi <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb27-2"><a href="basics.html#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="basics.html#cb27-3" tabindex="-1"></a>pi</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<p>To reset a workspace -for example in case of the assign to pi issue described above – you can make use of the following line of code:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="basics.html#cb29-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
+<ul>
+<li><p>With ls() you can see your objects</p></li>
+<li><p>With rm() you can remove them</p></li>
+</ul>
+<p>Once you have assigned a value to your variable, you can now reuse that variable to perform all sorts of calculations.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="basics.html#cb30-1" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span>
+<span id="cb30-2"><a href="basics.html#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="basics.html#cb30-3" tabindex="-1"></a>ages<span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 484 484 441 625 529 361 529 625 361 441 400 529</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="basics.html#cb32-1" tabindex="-1"></a><span class="fu">sum</span>(ages)</span></code></pre></div>
+<pre><code>## [1] 263</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="basics.html#cb34-1" tabindex="-1"></a><span class="dv">220</span> <span class="sc">-</span> ages</span></code></pre></div>
+<pre><code>##  [1] 198 198 199 195 197 201 197 195 201 199 200 197</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="basics.html#cb36-1" tabindex="-1"></a>predicted_maximum_heart_rate <span class="ot">&lt;-</span> <span class="dv">220</span> <span class="sc">-</span> ages</span>
+<span id="cb36-2"><a href="basics.html#cb36-2" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="basics.html#cb36-3" tabindex="-1"></a>predicted_maximum_heart_rate</span></code></pre></div>
+<pre><code>##  [1] 198 198 199 195 197 201 197 195 201 199 200 197</code></pre>
+<p><u>Note:</u> variable names are case sensitive!</p>
+<p><code>ages</code> is not the same as <code>Ages</code> or <code>AGES</code> or <code>ageS</code>!</p>
+<p>If you misspell the variable name, R will respond with an error explaining what went wrong:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="basics.html#cb38-1" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span>
+<span id="cb38-2"><a href="basics.html#cb38-2" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="basics.html#cb38-3" tabindex="-1"></a>Ages</span></code></pre></div>
+<pre><code>## Error:
+## ! object &#39;Ages&#39; not found</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="basics.html#cb40-1" tabindex="-1"></a>AGES</span></code></pre></div>
+<pre><code>## Error:
+## ! object &#39;AGES&#39; not found</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="basics.html#cb42-1" tabindex="-1"></a>ageS</span></code></pre></div>
+<pre><code>## Error:
+## ! object &#39;ageS&#39; not found</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="basics.html#cb44-1" tabindex="-1"></a>ages</span></code></pre></div>
+<pre><code>##  [1] 22 22 21 25 23 19 23 25 19 21 20 23</code></pre>
+<p>START EXCERSISE 1.2</p>
+</div>
+</div>
+<div id="functions" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Functions<a href="basics.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Besides Variables, another common object in R are <u>Functions</u>. Functions in R take the following form:</p>
+<p><code>f()</code></p>
+<p>You have already used several functions <code>c(1, 2, 3)</code>; <code>sum(ages)</code>; <code>rm()</code>; <code>ls()</code>.</p>
+<p>Another example of a function you have used already are operators such as <code>+</code> and <code>^</code>. You have used these operators as <code>3 + 2</code>. This is shorthand for <code>'+'(3, 2)</code>.</p>
+<p>Almost always in R, functions also take some form of input, and have the following property:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="basics.html#cb46-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/FunctionLogicText.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/FunctionLogicText.png" /><!-- --></p>
+<p>An example of this principle is the following:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="basics.html#cb47-1" tabindex="-1"></a><span class="fu">sum</span>(ages)</span></code></pre></div>
+<pre><code>## [1] 263</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="basics.html#cb49-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/FunctionExample1.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/FunctionExample1.png" /><!-- --></p>
+<p><code>sum</code> is a function that <u>takes</u> a vector (input) and <u>returns</u> the sum of that vector (output).</p>
+<p>Another example is the following:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="basics.html#cb50-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  1.2539431 -0.4335064 -0.3916710  0.8510520  0.6538364  0.2230424 -0.4467583  0.6624969 -2.6242821
+## [10] -0.9931889</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="basics.html#cb52-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/FunctionExample2.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/FunctionExample2.png" /><!-- --></p>
+<p><code>rnorm</code> is a function that <u>takes</u> an integer (input) and <u>returns</u> that number of random observations from a standard normal distribution (output).</p>
+<p>The input of a function is called its <u>arguments</u>. Looking at our previous examples:</p>
+<ul>
+<li><p><code>ages</code> is the argument in <code>sum(ages)</code></p></li>
+<li><p><code>10</code> is the argument in <code>rnorm(10)</code></p></li>
+</ul>
+<p>Functions can have multiple arguments:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="basics.html#cb53-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean  =</span> <span class="dv">4</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##  [1] 4.6514542 6.6404649 2.9014556 1.4724369 7.7486683 0.7437290 3.0049684 0.8243892 3.5657309 1.8207459</code></pre>
+<p>Arguments can be specified either by name, or position:</p>
+<ul>
+<li><code>rnorm(10, mean = 4, sd = 2)</code> does the same as <code>rnorm(10, 4, 2).</code></li>
+</ul>
+<p>While specifying by position is faster to write and can sometimes remain easy to read (note how we did not name the first argument in the <code>rnorm()</code> function above, for example), for clarity it is often smart to specify all arguments but the first by name.</p>
+<p>You can figure out which arguments you can specify and under which names by consulting the help files by adding <code>?</code> in front of the function name:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="basics.html#cb55-1" tabindex="-1"></a>?rnorm</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="basics.html#cb56-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/HelpFiles.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/HelpFiles.png" /><!-- --></p>
+<p>This opens the help files, which shows a description of the function, a description of its arguments, as well as <u>default</u> values for those arguments. Default values represent the values that the function will use for arguments when they are not specified.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="basics.html#cb57-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/HelpFiles2.png&quot;</span>)</span></code></pre></div>
+<p><img src="images/HelpFiles2.png" /><!-- --></p>
+<p>We can see that for <code>rnorm</code>, the mean and standard deviation of the normal distribution from which <code>n</code> observations are drawn is <code>0</code> and <code>1</code> respectively. This means that if we don’t specify <code>mean</code> and <code>sd</code>, and run <code>rnorm(10)</code>, we will draw 10 observations from a normal distribution with a mean of 0 and a standard deviation of 1.</p>
+<p>We can also see that <code>n</code> does not have a default argument, which means that when we do not specify it, R gives us the following error:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="basics.html#cb58-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">mean =</span> <span class="dv">4</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## Error in `rnorm()`:
+## ! argument &quot;n&quot; is missing, with no default</code></pre>
+<p>Some arguments <u>have to</u> be specified for a function to run. How do you know which arguments need to be specified? Look at the help files (or online).</p>
+<p>Another common reason for errors is the result of inserting the wrong data type (integer, float, character, logical, etc.) into an argument. The <code>sum()</code> function in the following example requires a numeric vector as input, but we gave it the character vector <code>sum(c("Happy Meal", "Roger Rabbit")</code>) instead:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="basics.html#cb60-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">c</span>(<span class="st">&quot;Happy Meal&quot;</span>, <span class="st">&quot;Roger Rabbit&quot;</span>))</span></code></pre></div>
+<pre><code>## Error in `sum()`:
+## ! invalid &#39;type&#39; (character) of argument</code></pre>
+<p>The error message shows that an invalid type of argument was used. Logically this makes sense too, you cannot calculate a numeric sum from <code>"Happy Meal"</code> &amp; <code>"Roger Rabbit"</code>. Again, look at the help files (or online) to learn what type of arguments are valid input.</p>
+<p>Some more example functions:</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="basics.html#cb62-1" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span>
+<span id="cb62-2"><a href="basics.html#cb62-2" tabindex="-1"></a><span class="fu">length</span>(ages)</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<p><code>length()</code> prints out the number of elements within a vector.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="basics.html#cb64-1" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span>
+<span id="cb64-2"><a href="basics.html#cb64-2" tabindex="-1"></a><span class="fu">table</span>(ages)</span></code></pre></div>
+<pre><code>## ages
+## 19 20 21 22 23 25 
+##  2  1  2  2  3  2</code></pre>
+<p><code>table()</code> provides a descriptive overview of each unique value in a vector with a count showing how often the value occurred in the vector.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-1-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-basics.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
