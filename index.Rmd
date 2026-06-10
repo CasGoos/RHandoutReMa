@@ -16,7 +16,7 @@ link-citations: yes
 
 # About
 
-This is a handout???
+This is a handout from another computer???
 
 ```{r include = FALSE}
 # automatically create a bib database for R packages
