@@ -201,4 +201,4 @@ model8 <- lmer(Reaction ~ Days + (1 | Subject), data = sleepstudy)
 summary(model8)
 ```
 
-START EXCERCISE 4
+<center> __START EXCERSISE 4__

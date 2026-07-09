@@ -124,7 +124,7 @@ In short:
 knitr::include_graphics("images/NAIndexingLogic.png")
 ```
 
-START EXERCISE 3.1
+<center> __START EXCERSISE 3.1__
 
 ## Functions in Functions
 
@@ -307,4 +307,4 @@ knitr::include_graphics("images/TapplyLogic3.png")
 
 Third, we just like for apply name the function.
 
-START EXERCISE 3.2
+<center> __START EXCERSISE 3.2__
