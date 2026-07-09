@@ -309,7 +309,7 @@ We could not index from the vector, as we have only created a new list containin
 SWList[2][3]
 ```
 
-START EXCERCISE 2.1
+<center> __START EXCERSISE 2.1__
 
 ## Reading & Writing Data
 
@@ -609,4 +609,4 @@ Finally, here is a list of the common types of conditional selection operators y
 
 - `|`           (“OR”)
 
-START EXCERCISE 2.2
+<center> __START EXCERSISE 2.2__
