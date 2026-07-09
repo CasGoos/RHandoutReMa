@@ -1,5 +1,9 @@
 # Data
 
+Download link for Exercise 2 and the relevant Data: [exercise 2](./exercises/exercise2_files.zip)
+
+Download link for Answers to Exercise 2: [solutions exercise 2](./exercises/exercise2_solutions.R)
+
 ## Types of Data
 
 We have so far seen the following types of [Data]{.underline}: Integer, Double, Character, and Logical. These can be organized as follows:
@@ -309,7 +313,7 @@ We could not index from the vector, as we have only created a new list containin
 SWList[2][3]
 ```
 
-START EXCERCISE 2.1
+**START EXERCISE 2.1**
 
 ## Reading & Writing Data
 
@@ -609,4 +613,4 @@ Finally, here is a list of the common types of conditional selection operators y
 
 - `|`           (“OR”)
 
-START EXCERCISE 2.2
+**START EXERCISE 2.2**

@@ -4,6 +4,10 @@ In this final module, we will look at how we can run some basic statistical func
 
 We will not be discussing the logic behind statistical analyses, or the meaning of these results. That will be the focus of the Multivariate Analysis course.
 
+Download link for Exercise 4 and the relevant Data: [exercise 4](./exercises/exercise4_files.zip)
+
+Download link for Answers to Exercise 4: [solutions exercise 4](./exercises/exercise4_solutions.R)
+
 ## Formula Notation
 
 Most statistical functions in R require you to specify your model with formula notation, in the format: `y ~ x`.
@@ -201,4 +205,4 @@ model8 <- lmer(Reaction ~ Days + (1 | Subject), data = sleepstudy)
 summary(model8)
 ```
 
-START EXCERCISE 4
+**START EXERCISE 4**

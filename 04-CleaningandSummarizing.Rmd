@@ -1,5 +1,9 @@
 # Cleaning & Summarizing Data
 
+Download link for Exercise 3 and the relevant Data: [exercise 3](./exercises/exercise3_files.zip)
+
+Download link for Answers to Exercise 3: [solutions exercise 3](./exercises/exercise3_solutions.R)
+
 ## Recoding
 
 In Module 2 we said that you should always check your data as the first step in your analyses. After checking your data, your second step will often be to clean your data. Raw data is often messy and requires you to treat missing values and errors in the data.
@@ -124,7 +128,7 @@ In short:
 knitr::include_graphics("images/NAIndexingLogic.png")
 ```
 
-START EXERCISE 3.1
+**START EXERCISE 3.1**
 
 ## Functions in Functions
 
@@ -307,4 +311,4 @@ knitr::include_graphics("images/TapplyLogic3.png")
 
 Third, we just like for apply name the function.
 
-START EXERCISE 3.2
+**START EXERCISE 3.2**

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 The Basics | Research Master R Programming Handout</title>
   <meta name="description" content="This is a handout???." />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 The Basics | Research Master R Programming Handout" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Felix Clouth" />
 
 
-<meta name="date" content="2026-06-10" />
+<meta name="date" content="2026-07-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">ReMa R Programmign Handout</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
@@ -225,6 +225,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="basics" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> The Basics<a href="basics.html#basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Download link for Exercise 1: <a href="./exercises/exercise1.docx">exercise 1</a></p>
+<p>Download link for Answers to Exercise 1: <a href="./exercises/exercise1_solutions.R">solutions exercise 1</a></p>
 <div id="navigating-rstudio" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Navigating RStudio<a href="basics.html#navigating-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>RStudio is laid out into 4 different panes. The default panes are as shown below:</p>
@@ -246,12 +248,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><img src="images/OpenNewRScript.png" /><!-- --></p>
 <ul>
-<li>In your newly opened R script, type in <code>5</code> on line 1, then click enter to create a new line and type <code>2 + 3</code>. To run these lines of codes, select them or hold your cursor on that line and either press <strong>CTRL+ENTER</strong>, or click on the Run button. What do you see?</li>
+<li>In your newly opened R script, type in <code>5</code> on line 1, then click enter to create a new line and type <code>2 + 3</code>. To run these lines of codes, select them or hold your cursor on that line and either press CTRL+ENTER, or click on the Run button. What do you see?</li>
 </ul>
 <p><img src="images/ScriptToConsoleOutputExample.png" /><!-- --></p>
 <p>The commands are run through the console, and the output is presented the same way as before.</p>
 <ul>
-<li>To store this file either press <strong>CTRL+S</strong>, or navigate to <strong>File &gt; Save</strong>, and give the script a name. You can reopen this file and your previously written code will be available for you to rerun.</li>
+<li>To store this file either press CTRL+S, or navigate to File &gt; Save, and give the script a name. You can reopen this file and your previously written code will be available for you to rerun.</li>
 </ul>
 </div>
 <div id="workspace-window" class="section level3 hasAnchor" number="3.1.3">
@@ -270,7 +272,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="other-window" class="section level3 hasAnchor" number="3.1.4">
 <h3><span class="header-section-number">3.1.4</span> “Other” Window<a href="basics.html#other-window" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This window contains several different panes each with their own function, we will encounter some of these panes as we go through these modules and some others you will likely never use for the rest of your life.</p>
-<p>START EXCERSISE 1.1</p>
+<p><strong>START EXERSISE 1.1</strong></p>
 </div>
 </div>
 <div id="data-as-objects" class="section level2 hasAnchor" number="3.2">
@@ -425,7 +427,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## ! object &#39;ageS&#39; not found</code></pre>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="basics.html#cb34-1" tabindex="-1"></a>ages</span></code></pre></div>
 <pre><code>##  [1] 22 22 21 25 23 19 23 25 19 21 20 23</code></pre>
-<p>START EXCERSISE 1.2</p>
+<p><strong>START EXERSISE 1.2</strong></p>
 </div>
 </div>
 <div id="functions" class="section level2 hasAnchor" number="3.3">
@@ -442,8 +444,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>sum</code> is a function that <u>takes</u> a vector (input) and <u>returns</u> the sum of that vector (output).</p>
 <p>Another example is the following:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="basics.html#cb37-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -1.35235115  0.92902501  1.04954151 -0.83664116 -0.65641299  0.08651735
-##  [7]  0.08090433 -1.31071545  1.59267076  1.13468426</code></pre>
+<pre><code>##  [1]  1.0398580  0.6625416 -0.4826135  0.2359586 -1.0075261 -1.9286800
+##  [7] -0.5115835 -0.2617925  0.8470495 -1.0372038</code></pre>
 <p><img src="images/FunctionExample2.png" /><!-- --></p>
 <p><code>rnorm</code> is a function that <u>takes</u> an integer (input) and <u>returns</u> that number of random observations from a standard normal distribution (output).</p>
 <p>The input of a function is called its <u>arguments</u>. Looking at our previous examples:</p>
@@ -453,8 +455,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Functions can have multiple arguments:</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="basics.html#cb39-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean  =</span> <span class="dv">4</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##  [1] -1.68453510  3.86964593  6.05870635  3.43312782  1.99210393  1.35994476
-##  [7]  0.04870999  3.54962306  4.98065028  4.64739351</code></pre>
+<pre><code>##  [1] 8.320527 2.540615 5.278489 3.769010 2.080567 3.001994 2.933918 2.573092
+##  [9] 4.424143 1.320612</code></pre>
 <p>Arguments can be specified either by name, or position:</p>
 <ul>
 <li><code>rnorm(10, mean = 4, sd = 2)</code> does the same as <code>rnorm(10, 4, 2).</code></li>
@@ -537,7 +539,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## ! invalid &#39;type&#39; (character) of argument</code></pre>
 <p>The fault is in the second line. The error message tells you what is wrong. You cannot use the <code>sum()</code> function on a character vector.</p>
 <p>If the error or warning message is too complex to decipher yourself, a good second step is to type the error or warning message into Google, and then look for solutions others have proposed (Stackoverflow is again a particularly helpful resource here).</p>
-<p>START EXCERCISE 1.3</p>
+<p><strong>START EXERCISE 1.3</strong></p>
 </div>
 </div>
 <div id="indexing" class="section level3 hasAnchor" number="3.3.2">
@@ -586,7 +588,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="basics.html#cb79-1" tabindex="-1"></a>llama_age[<span class="st">&quot;Zaphod&quot;</span>]</span></code></pre></div>
 <pre><code>## Zaphod 
 ##      9</code></pre>
-<p>START EXCERCISE 1.4</p>
+<p><strong>START EXERCISE 1.4</strong></p>
 
 </div>
 </div>
