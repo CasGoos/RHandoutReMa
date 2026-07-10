@@ -64,6 +64,7 @@ The console returns `5`, the value of `x`.
 
 This window contains several different panes each with their own function, we will encounter some of these panes as we go through these modules and some others you will likely never use for the rest of your life.
 
+
 **START EXERSISE 1.1**
 
 ## Data as Objects
@@ -209,7 +210,9 @@ ageS
 ages
 ```
 
+
 **START EXERSISE 1.2**
+
 
 ## Functions
 
@@ -386,7 +389,9 @@ The fault is in the second line. The error message tells you what is wrong. You 
 
 If the error or warning message is too complex to decipher yourself, a good second step is to type the error or warning message into Google, and then look for solutions others have proposed (Stackoverflow is again a particularly helpful resource here).
 
+
 **START EXERCISE 1.3**
+
 
 ### Indexing
 
@@ -463,4 +468,6 @@ This allows you to index elements within that vector by adding their name in bet
 llama_age["Zaphod"]
 ```
 
+
 **START EXERCISE 1.4**
+
